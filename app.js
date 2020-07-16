@@ -84,3 +84,31 @@ function superPower2(){
 }
 
 console.log(superHero(superPower1, superPower2));
+
+
+// timing
+function blastOff(){
+    let num = 0;
+
+    for (let i = 10; i >= num; i--){
+        console.log(i); // 10, 9, 8, 7 ...
+    }
+    console.log('BLASTOFF!');
+}
+
+// setTimeout(blastOff, 5000);
+
+// exercise 1 
+// make function that prints your name
+// setTimeout and pass in that function and time 5 seconds
+
+function printName(){
+    let name = 'Barent';
+
+    for (let i = 0; i < name.length; i++){
+        console.log(name[i]);
+    }
+    console.log('Thats me!');
+}
+
+setTimeout(printName, 5000);
