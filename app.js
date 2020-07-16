@@ -98,7 +98,7 @@ function blastOff(){
 
 // setTimeout(blastOff, 5000);
 
-// exercise 1 
+// exercise 4 
 // make function that prints your name
 // setTimeout and pass in that function and time 5 seconds
 
@@ -111,16 +111,56 @@ function printName(){
     console.log('Thats me!');
 }
 
-setTimeout(printName, 5000);
+// setTimeout(printName, 5000);
 
 
 // rome anon func variation
-function printName(name){
-    console.log(name);
-}
+// function printName(name){
+//     console.log(name);
+// }
 
-let myNameTwo = 'Rome';
-setTimeout(function(){ //anonymous function! 
-    printName(myNameTwo);
+// let myNameTwo = 'Rome';
+// setTimeout(function(){ //anonymous function! 
+//     printName(myNameTwo);
+// });
+
+// ITERATORS
+// iterators in js are built in array functions
+
+// forEach is an array method!
+
+const collectables = ['Bomag', 'CMI Corp', 'Wirtgen', 'Catepiller'];
+
+collectables.forEach(function(element) { // for each element, i want to do this ()
+    console.log(element);
 });
 
+// fat arrow method
+collectables.forEach(element => {
+    if (element.length > 6){
+        console.log(element);
+    }
+});
+
+
+// map - goes through ever single element
+// and makes a new array with the changes
+
+const someNumbers = [24, 65, 347, 34];
+
+//this returns an array with 5 added to each number
+const addFive = someNumbers.map(element => {
+    return element + 5  // must return something!
+});                     
+
+console.log(addFive);
+
+// filter - similar to map
+// if you have it return something
+// it will return what you filter out
+const filteredNumbers = someNumbers.filter(element => {
+    if (element > 50){ //this will filter out everything above 50
+        return element;
+    }
+});
+console.log(filteredNumbers);
