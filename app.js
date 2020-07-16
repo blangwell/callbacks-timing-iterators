@@ -48,7 +48,7 @@ const numbersArray = [1,2,3,4,5,9,8,7,6];
 
 function calculator(num1, num2, callback1, callback2){
     let result = callback1(num1, num2) + callback2(num1, num2);
-
+    // callback 1 =  82 , callback 2 = -72 == (82 + -72)
     return result
 }
 
@@ -63,3 +63,24 @@ function subtractNumbers(num1, num2){
 }
 
 console.log(calculator(5, 77, addNumbers, subtractNumbers));
+
+// exercise 3 superhero function
+// take in two callbacks 
+// return a string in each callback describing the superpower
+
+function superHero(callback1, callback2){
+    let result = 'My superpowers are ' + callback1() + ' and ' + callback2();
+    return result;
+}
+
+function superPower1(){
+    let superPower = 'lazer eyes';
+    return superPower;
+}
+
+function superPower2(){
+    let superPower = 'emotional maturity';
+    return superPower;
+}
+
+console.log(superHero(superPower1, superPower2));
