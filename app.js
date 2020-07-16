@@ -86,7 +86,7 @@ function superPower2(){
 console.log(superHero(superPower1, superPower2));
 
 
-// timing
+// setTimeout
 function blastOff(){
     let num = 0;
 
@@ -112,3 +112,15 @@ function printName(){
 }
 
 setTimeout(printName, 5000);
+
+
+// rome anon func variation
+function printName(name){
+    console.log(name);
+}
+
+let myNameTwo = 'Rome';
+setTimeout(function(){ //anonymous function! 
+    printName(myNameTwo);
+});
+
